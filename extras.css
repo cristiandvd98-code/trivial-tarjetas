@@ -1,0 +1,41 @@
+.saved-board-panel {
+  margin-bottom: 18px;
+}
+
+.saved-board-list {
+  display: grid;
+  gap: 12px;
+}
+
+.saved-board-card {
+  display: grid;
+  gap: 10px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--surface) 96%, var(--soft));
+}
+
+.saved-board-card header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.saved-board-card h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.saved-board-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.35;
+}
+
+.saved-board-actions {
+  display: grid;
+  grid-template-columns: 1fr 44px;
+  gap: 8px;
+}
