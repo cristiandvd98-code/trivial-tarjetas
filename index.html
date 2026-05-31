@@ -3,8 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#1f6feb" />
     <title>Tarjetas Trivial</title>
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.svg" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="extras.css" />
   </head>
   <body>
     <main class="app-shell">
@@ -41,6 +46,14 @@
       </section>
 
       <section class="view" id="setupView">
+        <div class="saved-board-panel">
+          <div class="section-heading">
+            <h2>Mis partidas</h2>
+            <button class="text-button" id="saveBoardButton" type="button">Guardar actual</button>
+          </div>
+          <div class="saved-board-list" id="savedBoardList"></div>
+        </div>
+
         <div class="section-heading">
           <h2>Elige los 6 colores</h2>
           <button class="text-button" id="restoreDemoButton" type="button">Ejemplo</button>
@@ -159,5 +172,7 @@
     <input id="importQuestionsInput" type="file" accept=".csv,.tsv,text/csv,text/tab-separated-values" hidden />
     <input id="photoInput" type="file" accept="image/*" hidden />
     <script src="app.js"></script>
+    <script src="saved-boards.js"></script>
+    <script src="pwa.js"></script>
   </body>
 </html>
